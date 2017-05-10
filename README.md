@@ -7,5 +7,3 @@ angularJs demos
 
 
 
-
-
