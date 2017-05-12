@@ -1,8 +1,2 @@
 # angularJs
 angularJs demos
-
-
-
-
-
-
