@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <base href="/" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="shortcut icon" href="common/img/favicon.ico"> -->
+    <link href="/angularJs/sense/common/img/favicon.ico" type="image/x-icon" rel="icon">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link href="/angularJs/sense/common/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/angularJs/sense/common/vendors/Font-Awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/angularJs/sense/common/vendors/datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <!-- 公用的基础样式 -->
+    <link rel="stylesheet" type="text/css" href="/angularJs/sense/common/css/common.css" />
+  </head>
+  <body class="ng-hide" ng-show="engineStarted">
+    <div ng-view class="abs"></div>
+    <div id="zhlAlert" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header" style="padding:5px">
+            <!--<button type="button" class="btnCancel close pl5" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>-->
+            <h4 class="modal-title" id="zhlTipTitle">&nbsp;</h4>
+          </div>
+          <div id="zhlTipMsg" class="modal-body tc"></div>
+          <div class="modal-footer tc" style="border-top:none;">
+            <button id="btnSure_id" type="button" class="btnOks btn btn-default" data-dismiss="modal">确定</button>
+            <button id="btnCancels" type="button" class="btnCancel btn btn-default ml20_imp" data-dismiss="modal">取消</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="/angularJs/sense/common/vendors/jquery/jquery.min.js"></script>
+    <!--[if IE 9]>
+    <script type="text/javascript" src="/angularJs/sense/common/vendors/jquery.xdomainrequest.min.js"></script>
+    <script type="text/javascript">
+      window.isIE9=true;
+    </script>
+    <![endif]-->
+
+    <script src="/angularJs/sense/common/vendors/angular/angular.min.js"></script>
+    <script src="/angularJs/sense/common/vendors/angular/angular-translate.min.js"></script>
+    <script src="/angularJs/sense/common/vendors/angular/angular-translate-loader-static-files.min.js"></script>
+    <script src="/angularJs/sense/common/vendors/angular/angular-sanitize.min.js"></script>
+    <script src="/angularJs/sense/common/vendors/angular/angular-resource.min.js"></script>
+    <script src="/angularJs/sense/common/vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/angularJs/sense/common/vendors/angular/angular-route.min.js"></script>
+    <script src="/angularJs/sense/common/vendors/angular/angular-cookies.min.js"></script>
+    <script src="/angularJs/sense/common/vendors/file-upload/dist/angular-file-upload.min.js" async></script>
+    <script src="/angularJs/sense/common/vendors/datetimepicker/js/bootstrap-datetimepicker.min.js" ></script>
+    <script src="/angularJs/sense/common/vendors/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8" async></script>
+
+    <script src="/angularJs/sense/common/vendors/LABjs/LAB.min.js"></script>
+    <script src="/angularJs/sense/common/engine/setting.js"></script>
+    <script src="/angularJs/sense/common/engine/tools.js"></script>
+    <script src="/angularJs/sense/common/js/common.js" async></script>
+    <script src="/angularJs/sense/common/engine/app.js"></script>
+    <script src="/angularJs/sense/senseYun/route_senseYun.js"></script>
+    <script src="/angularJs/sense/userCenter/route_userCenter.js"></script>
+    <script src="/angularJs/sense/common/engine/loader.js"></script>
+
+  </body>
+</html>

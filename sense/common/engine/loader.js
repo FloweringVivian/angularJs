@@ -25,8 +25,6 @@ if (!localStorage.debug) {
 } else {
     // 载入核心服务
     jsLAB.script('common/engine/services/user.js')
-    // .script('common/engine/services/file_stream.js')
-    // .script('common/engine/services/route_resolver.js')
         .script('common/engine/services/rest.js')
         .script('common/engine/services/restapi.js')
         .script('common/engine/services/oss.js')
@@ -108,10 +106,6 @@ if (!localStorage.debug) {
 
 // 载入通用函式
 jsLAB.script('common/engine/common.js')
-
-//载入环信IM
-// .script('common/easemob/config.js')
-// .script('common/easemob/easemob.conn.js')
 
 // 启动angularjs
 .wait(function () {
