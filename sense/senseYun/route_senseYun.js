@@ -5,11 +5,11 @@ webApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, 
 
     // 路由表
     $routeProvider
-        .when('/', {
-            redirectTo: '/login'
+        .when('/angularJs/sense/', {
+            redirectTo: '/angularJs/sense/login'
         })
-        .when('/login/:invitationSource?/:invitationCode?', {
-            templateUrl: 'common/views/login.html?',
+        .when('/angularJs/sense/login/:invitationSource?/:invitationCode?', {
+            templateUrl: '/angularJs/sense/common/views/login.html?',
             controller: 'loginCtrl',
             resolve: loader(['common/engine/controllers/login'])
         })
@@ -238,9 +238,9 @@ webApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, 
         //=========================采购 end============================
         //=========================销售 start==========================
         .when('/mysale', {
-            templateUrl: 'supplyCloud/views/mysale.html?',
+            templateUrl: 'senseYun/views/mysale.html',
             controller: 'mySaleCtrl',
-            resolve: loader(['supplyCloud/controllers/mysale'], 'mysale')
+            resolve: loader(['senseYun/controllers/mysale'], 'mysale')
         })
         //客户订单列表
         .when('/order/customer/list/:tabId?', {

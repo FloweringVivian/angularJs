@@ -1,0 +1,221 @@
+<!--<link rel="stylesheet" type="text/css" href="css/style.css" />-->
+<link rel="stylesheet" type="text/css" href="common/css/workbench.css" />
+<load-view src="common/views/module/headTop.html"></load-view>
+<head-main></head-main>
+<left-menu></left-menu>
+<div class="main">
+    <div class="body_main_nav">
+        <div class="container-fluid">
+            <div class="row f12 c002">
+                <div class="mt10 fr f14 c002 nav_topic">
+                    <!-- ERP同步（上次同步：08：45） -->    
+                    <a href="order/sales/list" ng-show="!_.isEmpty(soList)" target="_blank">我的销售单</a>
+                    <a href="customer/customer_my" target="_blank" ng-show="!_.isUndefined(billCount['6'])">我的客户</a>
+                    <!-- <a href="">我的信箱[ <span class="cRed">5</span> ] </a>    -->
+                    <!-- <a href="personal_settings/message_my" target="_blank">我的信息[ <span class="cRed" ng-bind="myMasTotalNum"></span> ] </a> -->
+                </div>
+                <div class="clearfix"></div>
+                <!-- 开始 -->
+                <div class="mt15 msg-tabs">
+                    <div class="index_layout">
+                        <div class="index_left">
+                            <div class="rows">
+                                <div class="col-6">
+                                    <div class="index_tit LH30">
+                                        <a href="order/customer/list/1"><!-- 客户订单列表 待接收页签 -->
+                                        <div class="fl f20 c002" style="margin-top:12px;">
+                                            待处理的客户订单 [ <span class="cRed" ng-bind="billCount['1']"></span> ]
+                                        </div>
+                                        </a>
+                                    </div> 
+                                    <div class="rows" style="margin-top:18px;">
+                                        <div class="tc mt100 ng-hide" ng-show="soList.length<1">
+                                            <img src="common/img/workbench/icon_dingdan_end.png" border="" width="85" height="84"/>
+                                            <div class="f14 mt50 tc" style="color:#888888;">很棒，你没有需要处理的销售订单！</div>
+                                        </div>
+                                        <div class="col-3 mb10 ng-hide" ng-show="soList.length>0" ng-repeat="list in soList">
+                                            <div class="p_box">
+                                                <div class="c002 f14">
+                                                    {{list.customerAbbr}}
+                                                    <div class="fr tr c005" ng-if="list.status!=1">
+                                                        <a class="c005"  href="order/customer/check/{{list.companyId}}/{{list.id}}">答交</a>
+                                                        <span class="pointer" ng-click="refuseOrder(list);">拒绝</span>
+                                                    </div>
+                                                    <div class="fr tr c005" ng-if="list.status==1">
+                                                        <a class="c005" href="order/customer/check/{{list.companyId}}/{{list.id}}">答交</a>
+                                                        <span class="pointer" ng-click="refuseOrder(list);">拒绝</span>
+                                                        <span class="pointer" ng-click="receiveOrder(list);">接收</span>
+                                                    </div>
+                                                </div>
+                                                <div class="c002 f14">
+                                                    单号:
+                                                    <a href="order/customer/detail_transfer/{{list.companyId}}/{{list.id}}/{{list.status}}" target="_blank">{{list.poInsideNo}}</a>
+                                                    <span class="fr f14">{{list.poFormDate}}</span>
+                                                </div>
+                                                <div style="min-height:48px;">
+                                                    <div class="c001 f12" ng-repeat="item in list.lineList">
+                                                        {{item.prodName}}&nbsp;&nbsp;
+                                                        <span>{{item.prodScale}}</span>
+                                                        <span class="fr">{{item.expectedDelivery}}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="tr f12 vb"><a href="order/customer/detail_transfer/{{list.companyId}}/{{list.id}}/{{list.status}}" target="_blank" class="c001">查看详情 》</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4 mt60">
+                                    <div class="rows">
+                                        <div class="col-3 mb10" ng-show="!_.isUndefined(billCount['2'])">
+                                            <div class="p_box_color"> 
+                                                <div class="p_box_tit s_box_bg_01">待确认的客户订单</div>
+                                                <div class="p_box_info">
+                                                    <a href="order/customer/list/3" target="_blank">
+                                                    <div class="c001">待确认的客户订单 [ <span class="cRed" ng-bind="billCount['2']"></span> ]</div>
+                                                    </a>  <!-- 客户订单列表 待客户确认 页签 -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 mb10" ng-show="!_.isUndefined(billCount['3'])">
+                                            <div class="p_box_color"> 
+                                                <div class="p_box_tit s_box_bg_02">待转销售订单的客户订单</div>
+                                                <div class="p_box_info">
+                                                    <a href="order/customer/list/4" target="_blank">
+                                                    <div class="c001">待转销售订单的客户订单 [ <span class="cRed" ng-bind="billCount['3']"></span> ]</div>
+                                                    </a>  <!-- 客户订单列表 待转销售订单 页签 -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 mb10" ng-show="!_.isUndefined(billCount['4'])">
+                                            <div class="p_box_color"> 
+                                                <div class="p_box_tit s_box_bg_03">异常提醒客户订单</div>
+                                                <div class="p_box_info">
+                                                    <a href="order/customer/list/-1" target="_blank">
+                                                    <div class="c001">异常提醒客户订单 [ <span class="cRed" ng-bind="billCount['4']"></span> ]</div>
+                                                    </a>  <!-- 客户订单列表 异常提醒 页签 -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 mb10" ng-show="!_.isUndefined(billCount['5'])">
+                                            <div class="p_box_color"> 
+                                                <div class="p_box_tit s_box_bg_04">可出货销售订单</div>
+                                                <div class="p_box_info">
+                                                    <a href="order/sales/list/2" target="_blank">
+                                                    <div class="c001">可出货销售订单 [ <span class="cRed" ng-bind="billCount['5']"></span> ]</div>
+                                                    </a>   <!-- 销售订单列表 未出货订单 页签 -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 mb10" ng-show="!_.isUndefined(billCount['6'])">
+                                            <div class="p_box_color"> 
+                                                <div class="p_box_tit s_box_bg_03">异常提醒销售订单</div>
+                                                <div class="p_box_info">
+                                                    <a href="order/sales/list/4" target="_blank">
+                                                    <div class="c001">异常提醒销售订单 [ <span class="cRed" ng-bind="billCount['6']"></span> ]</div>
+                                                    </a>  <!-- 销售订单列表 异常提醒 页签 -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 mb10" ng-show="!_.isUndefined(billCount['7'])">
+                                            <div class="p_box_color"> 
+                                                <div class="p_box_tit s_box_bg_05">待答复客户变更</div>
+                                                <div class="p_box_info">
+                                                    <a href="customer_change/list/1" target="_blank">
+                                                    <div class="c001">待答复客户变更 [ <span class="cRed" ng-bind="billCount['7']"></span> ]</div>
+                                                    </a>  <!-- 客户变更单列表 待答复 页签 -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 mb10" ng-show="!_.isUndefined(billCount['8'])">
+                                            <div class="p_box_color"> 
+                                                <div class="p_box_tit s_box_bg_02">待转销售变更的客户变更</div>
+                                                <div class="p_box_info">
+                                                    <a href="customer_change/list/2" target="_blank">
+                                                    <div class="c001">待转销售变更的客户变更 [ <span class="cRed" ng-bind="billCount['8']"></span> ]</div>
+                                                    </a>  <!-- 客户变更单列表 待转销售变更 页签 -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 mb10" ng-show="!_.isUndefined(billCount['9'])">
+                                            <div class="p_box_color"> 
+                                                <div class="p_box_tit s_box_bg_06">待提交销售变更</div>
+                                                <div class="p_box_info">
+                                                    <a href="sale_change/list" target="_blank">
+                                                    <div class="c001">待提交销售变更 [ <span class="cRed" ng-bind="billCount['9']"></span> ]</div>
+                                                    </a>  <!-- 销售变更单列表 过滤出状态为“草稿”的销售变更单 -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 mb10" ng-show="!_.isUndefined(billCount['10'])">
+                                            <div class="p_box_color"> 
+                                                <div class="p_box_tit s_box_bg_04">待提交的出货单</div>
+                                                <div class="p_box_info">
+                                                    <a href="order/delivery/list" target="_blank">
+                                                    <div class="c001">待提交的出货单 [ <span class="cRed" ng-bind="billCount['10']"></span> ]</div>
+                                                    </a>  <!-- 出货单列表，过滤出状态为“待提交”的出货单 -->
+                                                    <div>
+                                                        <a href="order/delivery/add" class="f14" target="_blank">新建</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 mb10" ng-show="!_.isUndefined(billCount['11'])">
+                                            <div class="p_box_color"> 
+                                                <div class="p_box_tit s_box_bg_05">待核准的客户</div>
+                                                <div class="p_box_info">
+                                                    <a href="customer/customer_my/3" target="_blank">
+                                                    <div class="c001">待核准的客户 [ <span class="cRed" ng-bind="billCount['11']"></span> ]</div>
+                                                    </a>  <!-- 我的客户页面 客户邀约清单 页签 过滤出待接受状态的邀约清单 -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 mb10" ng-show="!_.isUndefined(billCount['12'])">
+                                            <div class="p_box_color"> 
+                                                <div class="p_box_tit s_box_bg_07" style="background-size:20px 20px;">待转销退客户退换货单</div>
+                                                <div class="p_box_info">
+                                                    <a href="sale_return/customer_list/2" target="_blank">
+                                                    <div class="c001">待转销退客户退换货单 [ <span class="cRed" ng-bind="billCount['12']"></span> ]</div>
+                                                    </a>  <!-- 客户退换货单列表，选中“可转销退”页签 -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="index_right mt60"> 
+                            <div class="p_box">
+                                <div class="user_img fl"><img src="{{(userInfoDetail.url == '' || !userInfoDetail.url)?'common/img/img-default.png':getDownLoadUrl(userInfoDetail.url)}}" border="" width="100%" height="100%"/></div>
+                                <div class="user_name fl">{{userInfoDetail.userName}}</div>
+                            </div>
+                            <div ng-show="customerNotify.TotalNum!=0">
+                                <a href="personal_settings/message_my" target="_blank">
+                                <div class="ir_tit c002">客户通知[ <span class="cRed" ng-bind="customerNotify.TotalNum"></span> ]</div>
+                                </a>
+                                <div class="p_box">
+                                    <ul class="p_box_ul">
+                                        <li ng-repeat="i in customerNotify.detail"><a href="javascript:;">{{i.TypeName}}：{{i.Title}}</a></li>
+                                        <li class="tr" ><a href="personal_settings/message_my" target="_blank">查看全部 》</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- <div class="">
+                                <div class="ir_tit">联系客服</div>
+                                <div class="p_box">
+                                    <ul class="p_box_ul">
+                                        <li><a href="javascript:;">在线客服</a></li>
+                                        <li><a href="javascript:;">在线留言</a></li>
+                                        <li><a href="javascript:;">服务热线</a></li>
+                                    </ul>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- end -->
+            </div> 
+        </div> 
+    </div>
+</div>
+<load-view src="common/views/module/bottomB.html"></load-view>
