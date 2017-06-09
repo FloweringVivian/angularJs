@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>My AngularJS App</title>
+  <link rel="stylesheet" href="css/app.css"/>
+  <script src="lib/angular/angular.min.js"></script>
+  <script src="lib/angular/angular-route.min.js"></script>
+</head>
+<body ng-app="app">
+<a href="#/">School Buddy</a>
+
+
+<a href="#/schools">Schools</a>
+<a href="#/classrooms">Classrooms</a>
+<a href="#/activities">Activities</a>
+
+<div ng-view></div>
+
+<script src="js/app1.js"></script>
+<script src="controllers/HomeController.js"></script>
+<script src="controllers/AllSchoolsController.js"></script>
+<script src="controllers/AllClassroomsController.js"></script>
+<script src="controllers/AllActivitiesController.js"></script>
+</body>
+</html>
