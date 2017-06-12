@@ -6,20 +6,20 @@ app.config(['$routeProvider', function($routeProvider){
 
   $routeProvider
       .when('/',{
-        controller: 'HomeController' ,
+        controller: 'homeCtrl' ,
         templateUrl: 'views/home.html'
       })
-      .when('/schools',{
-        controller: 'AllSchoolsController',
-        templateUrl: 'views/allSchools.html'
+      .when('/user',{
+        controller: 'userCtrl',
+        templateUrl: 'views/user.html'
       })
-      .when('/classrooms',{
-        controller: 'AllClassroomsController',
-        templateUrl: 'views/allClassrooms.html'
+      .when('/product',{
+        controller: 'productCtrl',
+        templateUrl: 'views/product.html'
       })
-      .when('/activities',{
-        controller: 'AllActivitiesController',
-        templateUrl: 'views/allActivities.html'
+      .when('/my',{
+        controller: 'myCtrl',
+        templateUrl: 'views/my.html'
       })
       .otherwise('/');
 }]);
