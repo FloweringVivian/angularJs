@@ -1,1 +1,18 @@
-
+html,body,h1,h2,h3,h4,h5,h6,p,ul,li,ol,dl,dt,dd,div,span,a,b,i,strong,em,img,form,input,textarea,table,th,td{
+    padding: 0;
+    margin: 0;
+}
+html,body{
+    font-family:'Microsoft Yahei';
+}
+.page-header{
+    padding: 25px;
+    margin: 0;
+}
+.left-bar{
+    padding: 20px;
+    border-right: 1px solid #eee;
+}
+.main{
+    padding: 20px;
+}

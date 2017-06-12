@@ -1,0 +1,30 @@
+{
+  "code": 0,
+  "desc": "成功",
+  "userList": [
+    {
+      "id": "100001",
+      "userName": "史媛媛",
+      "email": "shiyy@sense.com.cn",
+      "phone": "13552240366",
+      "address": "北京市海淀区互联网创新中心",
+      "remark": "活跃用户"
+    },
+    {
+      "id": "100002",
+      "userName": "shiyy2",
+      "email": "shiyy2@sense.com.cn",
+      "phone": "13552245533",
+      "address": "北京市海淀区互联网创新中心5号楼",
+      "remark": "普通用户"
+    },
+    {
+      "id": "100003",
+      "userName": "史媛媛003",
+      "email": "shiyy003@sense.com.cn",
+      "phone": "13552240365",
+      "address": "北京市昌平区定福皇庄村",
+      "remark": "管理员"
+    }
+  ]
+}

@@ -1,5 +1,18 @@
-<div>
-    <div>
-        <h1>User</h1>
-    </div>
+<div class="user">
+    <table class="table table-bordered">
+        <tr>
+            <th>姓名</th>
+            <th>邮箱</th>
+            <th>手机号</th>
+            <th>联系地址</th>
+            <th>备注</th>
+        </tr>
+        <tr ng-repeat="user in userList">
+            <td ng-bind="user.userName"></td>
+            <td ng-bind="user.email"></td>
+            <td ng-bind="user.phone"></td>
+            <td ng-bind="user.address"></td>
+            <td ng-bind="user.remark"></td>
+        </tr>
+    </table>
 </div>

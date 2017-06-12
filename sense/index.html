@@ -10,12 +10,11 @@
 </head>
 <body ng-app="app">
 <div class="page-header">
-  <h1>Header</h1>
-  <small>angular.js demos</small>
+  <h1>Header <small>angular.js demos</small></h1>
 </div>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-lg-2">
+    <div class="col-lg-2 left-bar">
       <ul class="nav nav-pills nav-stacked">
         <li><a href="#/">首页</a></li>
         <li><a href="#/user">用户管理</a></li>
@@ -23,7 +22,7 @@
         <li><a href="#/my">个人中心</a></li>
       </ul>
     </div>
-    <div class="col-lg-10">
+    <div class="col-lg-10 main">
       <div ng-view></div>
     </div>
   </div>
