@@ -6,11 +6,18 @@ html,body{
     font-family:'Microsoft Yahei';
     height: 100%;
 }
+input,button,select,textarea{
+    outline: none;
+}
+
 .page-header{
     padding: 25px;
     margin: 0;
 }
-.container-fluid, .container-fluid>.row, .left-bar, .main{
+.container-fluid{
+    height: calc(100% - 90px);
+}
+.container-fluid>.row, .left-bar, .main{
     height: 100%;
 }
 .left-bar{
