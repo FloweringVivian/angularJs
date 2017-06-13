@@ -7,16 +7,60 @@ app.controller("userCtrl", function($scope, $http){
 
     //重置变量
     $scope.searchKey = "";
+    $scope.currentPage = 1;
+    $scope.pageSize = 10;
 
     //用户列表
     $scope.getUserList = function(){
         var url = 'http://localhost:63342/sense/json/userList.json';
         var param = {
-            "searchKey": $scope.searchKey
+            "searchKey": $scope.searchKey,
+            "currentPage": $scope.currentPage,
+            "pageSize": $scope.pageSize
         };
         $http.post(url, param).success(function(data) {
-            $scope.userList = data.userList;
+            if($scope.currentPage == 1){
+                $scope.userList = data.userList;
+            }else{
+                $scope.userList = data.userList2;
+            }
+            $scope.totalPage = data.totalPage;
+            $scope.totalCount = data.totalCount;
         });
+    };
+
+    //添加用户
+    $scope.addUser = function(){
+        var userJson = {
+            "id": "10000111",
+            "userName": $scope.userName,
+            "email": $scope.email,
+            "phone": $scope.phone,
+            "address": $scope.address,
+            "remark": $scope.remark
+        };
+        $scope.userList.unshift(userJson);
+        $("#newUser").modal("hide");
+    };
+
+    //查看用户
+    $scope.viewUserInfo = function(user){
+        $scope.userOne = user;
+    };
+
+    //删除用户
+    $scope.delUser = function(user){
+        var idx = $scope.userList.indexOf(user);
+        $scope.userList.splice(idx, 1);
+    };
+
+    //批量删除用户
+    $scope.batchDelUser = function(){
+        for (var i = $scope.userList.length - 1; i >= 0; i--) {
+            if ($scope.userList[i].isChecked) {
+                $scope.userList.splice(i, 1);
+            }
+        }
     };
 
     //全选
@@ -38,6 +82,24 @@ app.controller("userCtrl", function($scope, $http){
                 $scope.isChecked = false;
             }
         });
+    };
+
+    //分页
+    $scope.goPage = function( num ){
+        num = parseInt(num);
+        var re = /^[1-9]+[0-9]*]*$/;
+        if( !re.test(num) ){
+            //log("页码不是整数");
+            return;
+        }
+        if( num <1 || num >$scope.totalPage ){
+            //log("页码超出");
+            return;
+        }
+        $scope.currentPage = num;
+
+        $scope.isChecked = false;
+        $scope.getUserList();
     };
 
     //初始化

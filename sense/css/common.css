@@ -26,9 +26,24 @@ input,button,select,textarea{
 }
 .main{
     padding: 20px;
+    position: relative;
 }
 
 /*user*/
 .user-head{
     padding-bottom: 20px;
 }
+.control-text{
+    padding-top: 7px;
+}
+.cursor-pointer{
+    cursor: pointer;
+    color: #337ab7;
+}
+
+/* 分页 */
+.page{padding: 20px 0;position: absolute;bottom: 30px;left: 0;width: 100%;}
+.page-contain{margin:auto;line-height:30px;height:30px;text-align:center;font-size:14px;color:#303030;}
+.page-contain .cur{border:1px solid #06B5DF;color:#ffffff;background:#06B5DF;}
+.page-contain input{background:#fff;}
+.page-contain-link{line-height:30px;height:30px;margin-left:5px;display:inline-block;border:1px solid #DCD9D5;padding:0 8px;cursor:pointer;background:#f5f5f5;color:#337ab7;}
