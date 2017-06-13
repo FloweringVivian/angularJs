@@ -9,8 +9,9 @@
 
 </head>
 <body ng-app="app">
-<div class="page-header">
-  <h1>Header <small>angular.js demos</small></h1>
+<div class="page-header clearfix">
+  <h1 class="pull-left">Header <small>angular.js demos</small></h1>
+  <div class="pull-right">{{headUserName}}</div>
 </div>
 <div class="container-fluid">
   <div class="row">
@@ -35,6 +36,7 @@
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="js/app.js"></script>
 <script src="engine/filters.js"></script>
+<script src="engine/services/userService.js"></script>
 <script src="controllers/homeCtrl.js"></script>
 <script src="controllers/userCtrl.js"></script>
 <script src="controllers/productCtrl.js"></script>
