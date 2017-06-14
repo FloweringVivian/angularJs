@@ -21,54 +21,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.7692307">
-              <caret line="2" column="29" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="homeCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/homeCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="my.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/my.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.269231">
-              <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="userService.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/engine/services/userService.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="11" column="12" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="12" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="myCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/myCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="19" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="19" />
-              <folding>
-                <marker date="1497411360361" expanded="true" signature="40:170" placeholder="[...]" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -103,11 +61,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userList.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/engine/directives/userList.js">
+      <file leaf-file-name="product.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/product.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20674157">
-              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.25784755">
+              <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="my.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/my.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.88461536">
+              <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.88461536">
+              <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -116,11 +94,21 @@
       <file leaf-file-name="user.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/user.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.384615">
-              <caret line="38" column="16" selection-start-line="16" selection-start-column="8" selection-end-line="38" selection-end-column="16" />
+            <state vertical-scroll-proportion="-5.1153846">
+              <caret line="63" column="36" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
               <folding>
                 <element signature="n#div#3;n#div#0;n#!!top" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="userList.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/engine/directives/userList.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.964286">
+              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -138,7 +126,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/js/app.js" />
-        <option value="$PROJECT_DIR$/views/product.html" />
         <option value="$PROJECT_DIR$/controllers/productCtrl.js" />
         <option value="$PROJECT_DIR$/json/userList.json" />
         <option value="$PROJECT_DIR$/views/user.html" />
@@ -147,13 +134,14 @@
         <option value="$PROJECT_DIR$/engine/services/user.js" />
         <option value="$PROJECT_DIR$/engine/services/userService.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/views/home.html" />
         <option value="$PROJECT_DIR$/controllers/homeCtrl.js" />
         <option value="$PROJECT_DIR$/controllers/myCtrl.js" />
-        <option value="$PROJECT_DIR$/views/my.html" />
         <option value="$PROJECT_DIR$/css/common.css" />
         <option value="$PROJECT_DIR$/views/directives/userList.html" />
         <option value="$PROJECT_DIR$/engine/directives/userList.js" />
+        <option value="$PROJECT_DIR$/views/product.html" />
+        <option value="$PROJECT_DIR$/views/my.html" />
+        <option value="$PROJECT_DIR$/views/home.html" />
       </list>
     </option>
   </component>
@@ -704,13 +692,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/product.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.7692307">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/项目/智互联项目/git/zhl/supplyCloud/views/order/sales/list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.9615383">
@@ -782,22 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.7692307">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/homeCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -824,10 +789,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/my.html">
+    <entry file="file://$PROJECT_DIR$/engine/directives/userList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.269231">
-          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+        <state vertical-scroll-proportion="-13.964286">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -840,16 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.384615">
-          <caret line="38" column="16" selection-start-line="16" selection-start-column="8" selection-end-line="38" selection-end-column="16" />
-          <folding>
-            <element signature="n#div#3;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/directives/userList.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.615385">
@@ -858,10 +821,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engine/directives/userList.js">
+    <entry file="file://$PROJECT_DIR$/views/my.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20674157">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        <state vertical-scroll-proportion="-0.88461536">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.88461536">
+          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.1153846">
+          <caret line="63" column="36" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
+          <folding>
+            <element signature="n#div#3;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/product.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25784755">
+          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
           <folding />
         </state>
       </provider>
