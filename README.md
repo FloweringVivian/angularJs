@@ -9,7 +9,7 @@ angularJs demos
 
 	路由配置如下：
 
-```javascript```
+```javascript
 var app = angular.module('app', ['ngRoute']);
 
 app.config(['$routeProvider', function($routeProvider){
