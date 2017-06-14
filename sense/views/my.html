@@ -1,5 +1,20 @@
-<div>
-    <div>
-        <h1>My</h1>
-    </div>
+<div class="my">
+    <h1>My</h1>
+    <h3 class="mt50">当前登录用户信息</h3>
+    <dl class="dl-horizontal mt30">
+        <dt>用户名</dt>
+        <dd ng-bind="userInfo.userName"></dd>
+    </dl>
+    <dl class="dl-horizontal mt10">
+        <dt>账号</dt>
+        <dd ng-bind="userInfo.account"></dd>
+    </dl>
+    <dl class="dl-horizontal mt10">
+        <dt>邮箱</dt>
+        <dd ng-bind="userInfo.email"></dd>
+    </dl>
+    <dl class="dl-horizontal mt10">
+        <dt>手机号</dt>
+        <dd ng-bind="userInfo.phone"></dd>
+    </dl>
 </div>
