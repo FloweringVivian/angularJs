@@ -1,0 +1,13 @@
+{
+  "code": 0,
+  "desc": "成功",
+  "productList": [
+    {
+      "id": "200001",
+      "productCode": "pro2000001",
+      "productName": "端午节礼品",
+      "productLeader": "",
+      "productDescription": "端午节礼品是粽子"
+    }
+  ]
+}

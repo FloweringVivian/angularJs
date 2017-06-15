@@ -1,19 +1,29 @@
-<div>
-    <h2>Product List</h2>
-    <!--<user-list companyid="a_company_info.companyId"-->
-                      <!--vendorid="a_vendor_info.vendorId"-->
-                      <!--currencyid="a_currency_info.id"-->
-                      <!--taxid="a_tax_info.id"-->
-                      <!--conditionid="a_trading_info.id"-->
-                      <!--paywayid="a_pay_info.payWayId"-->
-                      <!--value="line.prod"-->
-                      <!--name="line.prod.prodCode"-->
-                      <!--multi="false"-->
-                      <!--dropdown="false"-->
-                      <!--class=""-->
-                      <!--style="width:100%;"-->
-                      <!--can-win="f_can_win()"-->
-                      <!--can-win-tip="f_can_win_tip()"-->
-                      <!--on-change="f_default_p_range(line)">-->
-    <!--</user-list>-->
+<div class="user">
+    <div class="user-head clearfix">
+        <div class="pull-left">
+            <user-list
+                    multi=false
+                    value="pro_user"
+                    oldvalue= "o_pro_user"
+                    name="pro_user.userName">
+            </user-list>
+        </div>
+        <div class="pull-left" style="margin-left:20px;line-height:34px;">{{pro_user.userName}}</div>
+    </div>
+    <div class="user-table">
+        <table class="table table-bordered">
+            <tr>
+                <th>产品编号</th>
+                <th>产品名称</th>
+                <th>产品负责人</th>
+                <th>产品简介</th>
+            </tr>
+            <tr ng-repeat="pro in productList">
+                <td ng-bind="pro.productCode"></td>
+                <td ng-bind="pro.productName"></td>
+                <td ng-bind="pro.productLeader"></td>
+                <td ng-bind="pro.productDescription"></td>
+            </tr>
+        </table>
+    </div>
 </div>
