@@ -1,28 +1,26 @@
 <div class="user">
-    <div class="user-head clearfix">
-        <div class="pull-left">
-            <user-list
-                    multi=false
-                    value="pro_user"
-                    oldvalue= "o_pro_user"
-                    name="pro_user.userName">
-            </user-list>
-        </div>
-        <div class="pull-left" style="margin-left:20px;line-height:34px;">{{pro_user.userName}}</div>
-    </div>
     <div class="user-table">
         <table class="table table-bordered">
             <tr>
                 <th>产品编号</th>
                 <th>产品名称</th>
-                <th>产品负责人</th>
                 <th>产品简介</th>
+                <th>产品负责人</th>
+                <th>操作</th>
             </tr>
             <tr ng-repeat="pro in productList">
                 <td ng-bind="pro.productCode"></td>
                 <td ng-bind="pro.productName"></td>
-                <td ng-bind="pro.productLeader"></td>
                 <td ng-bind="pro.productDescription"></td>
+                <td ng-bind="pro.pro_user.userName"></td>
+                <td>
+                    <user-list
+                        multi=false
+                        value="pro.pro_user"
+                        oldvalue= "pro.o_pro_user"
+                        name="pro.pro_user.userName">
+                    </user-list>
+                </td>
             </tr>
         </table>
     </div>
