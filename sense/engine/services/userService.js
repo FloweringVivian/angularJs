@@ -5,7 +5,7 @@ app.service('user', ["$q", '$rootScope', function ($q, $rootScope) {
 
   // 取得用户信息
   self.getUserInfo = function () {
-    var userInfo = {
+    var userInfo = {  //实际项目开发中应调接口获得
       "account": "shiyy@sense.com.cn",
       "userName": "史媛媛",
       "email": "shiyy@sense.com.cn",
