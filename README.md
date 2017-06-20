@@ -1,5 +1,4 @@
 # angularJs
-angularJs demos
 
 ## angularJs优点
 
