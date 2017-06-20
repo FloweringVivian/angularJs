@@ -107,7 +107,7 @@ app.config(['$routeProvider', function($routeProvider){
 
 ## 打包压缩
 
-
+gulp
 
 
 
