@@ -79,6 +79,8 @@ app.config(['$routeProvider', function($routeProvider){
 
 * 数据绑定影响性能
 
+* 在IE9上兼容不好
+
 * 相比于react或者vue，angular自身是一个重量级的框架，用户要受到框架的很多制约灵活性不够。
 
 	没有react或者vue这样的单文件组件，写一个组件，往往要在html,js,css三个文件中切换。一些小型项目还好,可到了大型项目简直就是灾难.每增加一个组件就要增加三个文件，文件非常琐碎。
