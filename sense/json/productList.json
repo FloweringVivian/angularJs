@@ -6,30 +6,35 @@
       "id": "200001",
       "productCode": "pro2000001",
       "productName": "元宵节礼品",
+      "productNum": "0.3",
       "productDescription": "元宵节礼品是元宵"
     },
     {
       "id": "200002",
       "productCode": "pro2000002",
       "productName": "端午节礼品",
+      "productNum": "0.4",
       "productDescription": "端午节礼品是粽子"
     },
     {
       "id": "200003",
       "productCode": "pro2000003",
       "productName": "中秋节礼品",
+      "productNum": "0.3",
       "productDescription": "中秋节礼品是月饼"
     },
     {
       "id": "200004",
       "productCode": "pro2000004",
       "productName": "端午节礼品",
+      "productNum": "0.3",
       "productDescription": "端午节礼品是粽子"
     },
     {
       "id": "200005",
       "productCode": "pro2000005",
       "productName": "中秋节礼品",
+      "productNum": "0.8",
       "productDescription": "中秋节礼品是月饼"
     }
   ]

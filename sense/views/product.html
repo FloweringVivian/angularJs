@@ -4,6 +4,7 @@
             <tr>
                 <th>产品编号</th>
                 <th>产品名称</th>
+                <th>数量占总数百分比</th>
                 <th>产品简介</th>
                 <th>产品负责人</th>
                 <th>操作</th>
@@ -11,6 +12,7 @@
             <tr ng-repeat="pro in productList">
                 <td ng-bind="pro.productCode"></td>
                 <td ng-bind="pro.productName"></td>
+                <td ng-bind="pro.productNum | turnPercent"></td>
                 <td ng-bind="pro.productDescription"></td>
                 <td ng-bind="pro.pro_user.userName"></td>
                 <td>

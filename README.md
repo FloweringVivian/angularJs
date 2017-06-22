@@ -68,6 +68,10 @@ app.config(['$routeProvider', function($routeProvider){
 
 网站中一些公共的数据信息可以写到自定义服务里，例如demo中将登录用户的基本信息写到了user这个service中，详情见demo中的个人中心。
 
+* 自定义过滤器
+
+详情见demo中的产品列表-数量占总数百分比
+
 ## angularJs缺点
 
 * 不利于SEO（搜索引擎优化）
@@ -107,6 +111,12 @@ app.config(['$routeProvider', function($routeProvider){
 个人觉得学习难度属于中级偏上，基本的简单地方学习起来比较容易，但是想要灵活的运用自定义组件还是需要花费一定的时间和精力。
 
 ## 打包压缩
+
+gulp
+
+## 兼容性
+
+兼容到IE9以上，但是对IE9的兼容存在问题，
 
 
 
