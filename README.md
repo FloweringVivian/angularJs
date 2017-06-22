@@ -1,5 +1,4 @@
 # angularJs
-angularJs demos
 
 ## angularJs优点
 
@@ -83,6 +82,8 @@ app.config(['$routeProvider', function($routeProvider){
 * 不适合交互频繁的网站，如游戏之类交互体验网站
 
 * 数据绑定影响性能
+
+* 在IE9上兼容不好
 
 * 相比于react或者vue，angular自身是一个重量级的框架，用户要受到框架的很多制约灵活性不够。
 
