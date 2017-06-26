@@ -113,7 +113,7 @@ app.config(['$routeProvider', function($routeProvider){
 
 ## 打包压缩
 
-gulp
+使用gulp进行打包压缩
 
 ## 兼容性
 
