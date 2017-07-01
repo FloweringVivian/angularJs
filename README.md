@@ -119,6 +119,4 @@ app.config(['$routeProvider', function($routeProvider){
 
 兼容到IE9以上，但是对IE9的兼容存在问题
 
-
-
 	
