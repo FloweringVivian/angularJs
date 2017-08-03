@@ -32,6 +32,7 @@ app.controller("userCtrl", function($scope, $http){
     //添加用户
     $scope.addUser = function(){
         console.log(JSON.stringify($scope.labelList));
+        console.log(JSON.stringify($scope.typeList));
         var userJson = {
             "id": "10000111",
             "userName": $scope.userName,
@@ -48,7 +49,7 @@ app.controller("userCtrl", function($scope, $http){
     $scope.labelList = [{"value": "normal"},{"value": "vip"}];
     $scope.addLabel = function(){
         $scope.labelList.push({"value": ""});
-    }
+    };
 
     //查看用户
     $scope.viewUserInfo = function(user){
