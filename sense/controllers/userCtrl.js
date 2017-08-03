@@ -50,6 +50,9 @@ app.controller("userCtrl", function($scope, $http){
     $scope.addLabel = function(){
         $scope.labelList.push({"value": ""});
     };
+    $scope.delLabel = function(index){
+        $scope.labelList.splice(index,1);
+    };
 
     //查看用户
     $scope.viewUserInfo = function(user){
